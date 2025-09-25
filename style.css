@@ -1,0 +1,188 @@
+/* --- Google Font & Global Styles --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+    --primary-red: #c0392b; /* A deep, modern red */
+    --primary-green: #16a085; /* A modern teal/green */
+    --dark-charcoal: #2c3e50;
+    --light-gray: #f4f6f7;
+    --pure-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-gray);
+    color: var(--dark-charcoal);
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--primary-green);
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--pure-white);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.logo {
+    color: var(--primary-red);
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: var(--dark-charcoal);
+    padding: 10px 15px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: var(--primary-green);
+}
+
+/* --- Hero Section --- */
+#hero {
+    background: var(--dark-charcoal);
+    color: var(--pure-white);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h1 {
+    color: var(--pure-white);
+}
+
+#hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-green);
+    color: var(--pure-white);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #1abc9c; /* Lighter green for hover */
+}
+
+/* --- Services Section --- */
+#services {
+    background: var(--pure-white);
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    text-align: center;
+}
+
+.card {
+    background: var(--light-gray);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 5px solid var(--primary-red);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.card h3 {
+    color: var(--primary-red);
+    font-size: 1.5rem;
+}
+
+/* --- Contact Section --- */
+#contact {
+    text-align: center;
+}
+.contact-email {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-green);
+    text-decoration: none;
+}
+
+/* --- Footer --- */
+footer {
+    background: var(--dark-charcoal);
+    color: var(--light-gray);
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* --- Responsive Design for Mobile --- */
+@media(max-width: 768px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 2rem; }
+
+    header nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header ul {
+        margin-top: 10px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+}
